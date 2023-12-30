@@ -1,0 +1,273 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    /* --main-color: #f00; */
+    --main-color: #dc3545;
+    --main-color-alt: #f00;
+    --primary-bg: #fafafa;
+    --main-transition: 0.3s
+}
+@font-face {
+    font-family: "cairoFont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+    font-family: "cairoFont", Arial, sans-serif;
+    background-color: var(--primary-bg);
+}
+a {
+    color:#000;
+    text-decoration: none !important;
+}
+.main-btn {
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #fff;
+}
+.main-btn:hover { background-color: var(--main-color-alt); color:  #fff; }
+/*==================== Start Header ====================*/
+.navbar { background-color: #fff; overflow: hidden; z-index: 9999; }
+.navbar .navbar-brand span svg { color: var(--main-color); }
+.navbar .navbar-brand #toggler:hover { color: var(--main-color); }
+.navbar .nav-item .nav-link {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+/* .navbar .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: 0;
+    left: -100%;
+    transition: var(--main-transition);
+}
+.navbar .nav-item .nav-link:hover::before {
+    left: 0;
+} */
+.navbar .nav-item:hover .nav-link { background-color: var(--primary-bg); color: var(--main-color);}
+.navbar .nav-item.active .nav-link { background-color: var(--primary-bg); color: var(--main-color);}
+.navbar .nav-item .login { color: var(--main-color); }
+.navbar .nav-item .login::before { display: none; }
+.navbar .serch-btn { color: var(--main-color); }
+.navbar .modal-header button:hover svg {
+    color: var(--main-color) !important; 
+}
+.offcanvas.offcanvas-end {
+    background-color: var(--primary-bg);
+    top: 58px !important;
+    z-index: 99999;
+    border: none;
+    width: 260px !important;
+}
+@media (max-width: 992px) {
+    .offcanvas.offcanvas-end {
+        top: 48px !important;
+    }
+}
+@media (max-width: 768px) {
+    .offcanvas.offcanvas-end {
+        top: 86px !important;
+    }
+}
+/* .offcanvas-backdrop.show {
+    opacity: .5;
+    z-index: 9 !important;
+} */
+.offcanvas.show:not(.hiding), .offcanvas.showing {
+    transform: translateX(-17px);
+}
+.offcanvas.offcanvas-end .offcanvas-header button {
+    background-color: transparent !important;
+    border: none;
+}
+.offcanvas.offcanvas-end .btn-xmark svg {
+    font-size: 25px;
+    transition: var(--main-transition);
+}
+.offcanvas.offcanvas-end .btn-xmark:hover svg {
+    color: var(--main-color);
+    transform: rotate(360deg) scale(1.5);
+}
+.offcanvas .offcanvas-body a {
+    font-size: 14px;
+}
+.offcanvas .offcanvas-body a:hover,
+.offcanvas .offcanvas-body a:hover svg { color: var(--main-color); }
+/*==================== End Header ====================*/
+/*==================== Start Page Body ====================*/
+.page-body .card {
+    border: none;
+}
+.page-body .card-content .card-icons {
+    position: relative;
+    overflow: hidden;
+}
+.page-body .card-content .card-icons img {
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+.page-body .card-content .card-icons:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.page-body .card-content .card-icons time {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 5px;
+}
+.page-body .card-content .card-icons svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: var(--main-transition);
+    background-color: var(--main-color);
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    line-height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+}
+.page-body .card-content .card-icons:hover svg { opacity: 1; }
+.page-body .card-content .card-title { min-height: 65px; padding: 5px 20px; display: flex; align-items: center; }
+.page-body .card-content .card-title:hover { color: var(--main-color); }
+.page-body .card-content .channel-img:hover { color: var(--main-color); }
+/*==================== End Page Body ====================*/
+/*==================== Start Watch Page ====================*/
+.watch-page .card .img-box {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+.watch-page .card .img-box:hover img {
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+.watch-page .comments .dropdown .dropdown-menu {
+    -webkit-transform: translate(30px, 38px) !important;
+    -moz-transform: translate(30px, 38px) !important;
+    -o-transform: translate(30px, 38px) !important;
+    transform: translate(30px, 38px) !important;
+}
+.watch-page .card .img-box time {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 5px;
+    font-size: 13px;
+}
+.watch-page .card .img-box svg {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: var(--main-transition);
+    background-color: var(--main-color);
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    line-height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+}
+.watch-page .card .img-box:hover svg { opacity: 1; }
+.watch-page .card-block a:hover { color: var(--main-color); }
+.watch-page .vid-box { background-color: #fff; }
+.watch-page .video-info #more { display: none; }
+.watch-page .watch-icons { padding: 50px 0; }
+/*==================== End Watch Page ====================*/
+/*==================== Start Channel Page ====================*/
+.channel-page .banner > div {
+    bottom: 10px
+}
+.channel-page .nav-channel {
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    .channel-page .banner > div .main-btn,
+    .channel-page .banner > div .social-media {
+        font-size: 11px;
+    }
+    .channel-page .navbar ul li {
+        font-size: 13px;
+    }
+}
+@media (max-width: 500px) {
+    .channel-page .navbar ul {
+        /* margin-left: 50%; */
+        transform: translateX(5%);
+    }
+    .channel-page .navbar ul li {
+        font-size: 10px;
+    }
+}
+/*==================== End Channel Page ====================*/
+/*==================== End Search Page ====================*/
+.search-page .card .img-box {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+.search-page .card .img-box:hover img {
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transition: var(--main-transition);
+}
+.search-page .card time {
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 5px;
+    font-size: 13px;
+}
+.search-page .card .img-box svg {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: var(--main-transition);
+    background-color: var(--main-color);
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    line-height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+}
+.search-page .card .img-box:hover svg { opacity: 1; }
+.search-page .card-block a:hover { color: var(--main-color); }
+/*==================== End Search Page ====================*/
